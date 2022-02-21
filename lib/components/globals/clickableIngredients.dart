@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-// ignore: unused_import
 import 'package:sliceapp/slice_theme.dart';
+import 'dart:developer';
 
-class CustomClickableTile extends StatefulWidget {
+class clickableIngredients extends StatefulWidget {
   final String title;
   final String clickedTitle;
   final Widget img;
 
-  const CustomClickableTile({
+  const clickableIngredients({
     Key? key,
     required this.title,
     required this.clickedTitle,
@@ -15,21 +15,26 @@ class CustomClickableTile extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _CustomClickableTile createState() => new _CustomClickableTile();
+  _clickableIngredients createState() => new _clickableIngredients();
 }
 
-class _CustomClickableTile extends State<CustomClickableTile> {
+class _clickableIngredients extends State<clickableIngredients> {
   bool _isButtonDisabled = false;
+  int _counter = 0;
 
   void _buttonChange() {
     setState(() {
       _isButtonDisabled = !_isButtonDisabled;
+      _counter++;
+      log('data: $_counter');
     });
   }
 
   void _resetButton() {
     setState(() {
       _isButtonDisabled = !_isButtonDisabled;
+      _counter--;
+      log('data: $_counter');
     });
   }
 
@@ -58,7 +63,6 @@ class _CustomClickableTile extends State<CustomClickableTile> {
                       onSurface: Colors.grey, //disable color
                     ),
                     onPressed: _isButtonDisabled ? _resetButton : _buttonChange,
-                    
                   ),
                 ))),
       ],

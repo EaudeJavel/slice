@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sliceapp/slice_theme.dart';
 import 'package:sliceapp/components/globals/cardsMenu.dart';
 // ignore: unused_import
-import 'package:sliceapp/components/globals/customClickableTile.dart';
+import 'package:sliceapp/components/globals/clickableIngredients.dart';
 
 class MRecetteScreen extends StatefulWidget {
   
