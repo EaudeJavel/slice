@@ -21,7 +21,6 @@ final List<String> entries = <String>[
   'Epicerie',
   'Fruits et légumes'
 ];
-bool isEnableTile = true;
 
 class _CourseScreenState extends State<CourseScreen> {
   @override
@@ -80,7 +79,6 @@ class _CourseScreenState extends State<CourseScreen> {
   }
 }
 
-// ignore: must_be_immutable
 class _ListeScreenState extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -156,35 +154,35 @@ class _ListeScreenState extends StatelessWidget {
                             child: ListView(
                               physics: const NeverScrollableScrollPhysics(),
                               children: [
-                                clickableIngredients(
-                                  title: "Pain à burger",
-                                  clickedTitle: "Pain à burger acheté",
-                                  img: Image.asset(
-                                      'lib/assets/images/bread.png'),
-                                ),
-                                clickableIngredients(
-                                    img: Image.asset(
-                                        'lib/assets/images/cereal.png'),
-                                    clickedTitle: "Haricots achetés",
-                                    title: "Haricots rouges en boite"),
-                                clickableIngredients(
-                                  img:
-                                      Image.asset('lib/assets/images/nuts.png'),
-                                  title: "Quinoa",
-                                  clickedTitle: "Quinoa acheté",
-                                ),
-                                clickableIngredients(
-                                  img: Image.asset(
-                                      'lib/assets/images/cereal.png'),
-                                  title: "Flocon d'avoine",
-                                  clickedTitle: "Flocons d'avoine achetés",
-                                ),
-                                clickableIngredients(
-                                  img: Image.asset(
-                                      'lib/assets/images/tomato.png'),
-                                  title: "Concentré de tomates",
-                                  clickedTitle: "Concentré de tomates acheté",
-                                ),
+                                // clickableIngredients(
+                                //   title: "Pain à burger",
+                                //   clickedTitle: "Pain à burger acheté",
+                                //   img: Image.asset(
+                                //       'lib/assets/images/bread.png'),
+                                // ),
+                                // clickableIngredients(
+                                //     img: Image.asset(
+                                //         'lib/assets/images/cereal.png'),
+                                //     clickedTitle: "Haricots achetés",
+                                //     title: "Haricots rouges en boite"),
+                                // clickableIngredients(
+                                //   img:
+                                //       Image.asset('lib/assets/images/nuts.png'),
+                                //   title: "Quinoa",
+                                //   clickedTitle: "Quinoa acheté",
+                                // ),
+                                // clickableIngredients(
+                                //   img: Image.asset(
+                                //       'lib/assets/images/cereal.png'),
+                                //   title: "Flocon d'avoine",
+                                //   clickedTitle: "Flocons d'avoine achetés",
+                                // ),
+                                // clickableIngredients(
+                                //   img: Image.asset(
+                                //       'lib/assets/images/tomato.png'),
+                                //   title: "Concentré de tomates",
+                                //   clickedTitle: "Concentré de tomates acheté",
+                                // ),
                               ],
                             ),
                           ),

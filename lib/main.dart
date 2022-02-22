@@ -21,6 +21,9 @@ import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
+
 final FlutterAppAuth appAuth = FlutterAppAuth();
 final FlutterSecureStorage secureStorage = const FlutterSecureStorage();
 
@@ -129,11 +132,15 @@ class Login extends StatelessWidget {
 // /// -----------------------------------
 // ///                 App
 // /// -----------------------------------
-
-// void main() => runApp(SliceApp());
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
+
+  //firebase
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 
   await sharedPrefs.init();
   runApp(
