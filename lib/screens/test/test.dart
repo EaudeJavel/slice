@@ -32,19 +32,14 @@ class TestScreenState extends State<TestScreen> {
           ),
         ),
         backgroundColor: Color(0xFFFEF1D7),
-        body: ListView(children: <Widget>[
-          Text(
-            'caca',
-            style: Theme.of(context).textTheme.subtitle1,
-          )
-        ]));
+        body: GetIngredients('0M4x1sdchyF2Mxgk4ziB'));
   }
 }
 
-class GetUserName extends StatelessWidget {
+class GetIngredients extends StatelessWidget {
   final String documentId;
 
-  GetUserName(this.documentId);
+  GetIngredients(this.documentId);
 
   @override
   Widget build(BuildContext context) {

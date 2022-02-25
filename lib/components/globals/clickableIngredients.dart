@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:sliceapp/slice_theme.dart';
 import 'dart:developer';
 
-class clickableIngredients extends StatefulWidget {
+class ClickableIngredients extends StatefulWidget {
   final String title;
   final String clickedTitle;
   final Widget img;
 
-  const clickableIngredients({
+  const ClickableIngredients({
     Key? key,
     required this.title,
     required this.clickedTitle,
@@ -15,10 +15,10 @@ class clickableIngredients extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _clickableIngredients createState() => new _clickableIngredients();
+  _ClickableIngredients createState() => new _ClickableIngredients();
 }
 
-class _clickableIngredients extends State<clickableIngredients> {
+class _ClickableIngredients extends State<ClickableIngredients> {
   bool _isButtonDisabled = false;
   int _counter = 0;
 
